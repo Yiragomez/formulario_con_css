@@ -1,0 +1,718 @@
+/* =========================================================
+   ESTILO GENERAL - VINTAGE AZUL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FONDO
+   ========================================================= */
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9eff8,
+            #b9dceb
+        );
+
+    color: #304f5f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   DECORACIÓN DEL FONDO
+   ========================================================= */
+
+body::before {
+    content: "✦";
+
+    position: fixed;
+
+    top: 8%;
+    left: 8%;
+
+    font-size: 45px;
+
+    color: rgba(74, 130, 157, 0.25);
+
+    transform: rotate(-15deg);
+
+    pointer-events: none;
+}
+
+
+body::after {
+    content: "✧";
+
+    position: fixed;
+
+    bottom: 10%;
+    right: 9%;
+
+    font-size: 55px;
+
+    color: rgba(74, 130, 157, 0.25);
+
+    transform: rotate(15deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+   ========================================================= */
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #315c73;
+
+    text-align: center;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 28px;
+
+    text-shadow:
+        2px 2px 0px rgba(255, 255, 255, 0.8),
+        3px 4px 5px rgba(45, 93, 123, 0.20);
+
+    position: relative;
+
+    animation: aparecerTitulo 0.8s ease;
+}
+
+
+/* Decoración debajo del título */
+
+h1::after {
+    content: "❖";
+
+    display: block;
+
+    font-size: 16px;
+
+    color: #679bb4;
+
+    margin-top: 8px;
+
+    letter-spacing: 8px;
+}
+
+
+/* =========================================================
+   PRIMER FORMULARIO
+   ========================================================= */
+
+form {
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.96),
+            rgba(246, 252, 254, 0.96)
+        );
+
+    width: 430px;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    border: 1px solid #a8c7d5;
+
+    box-shadow:
+        0 12px 30px rgba(42, 83, 101, 0.20),
+        inset 0 0 0 5px rgba(217, 239, 248, 0.45);
+
+    animation: aparecerFormulario 0.8s ease;
+
+    transition: 0.35s ease;
+}
+
+
+/* =========================================================
+   SIN "POKÉMON TRAINER"
+   ========================================================= */
+
+form::before {
+    content: none;
+}
+
+
+/* =========================================================
+   EFECTO DEL FORMULARIO
+   ========================================================= */
+
+form:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 35px rgba(42, 83, 101, 0.25),
+        inset 0 0 0 5px rgba(217, 239, 248, 0.55);
+}
+
+
+/* =========================================================
+   ETIQUETAS
+   ========================================================= */
+
+label {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: bold;
+
+    color: #34586b;
+
+    margin-bottom: 7px;
+
+    font-size: 15px;
+
+    letter-spacing: 0.3px;
+
+    transition: 0.3s;
+}
+
+
+label:hover {
+    color: #4b829e;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 2px solid #c2dbe6;
+
+    border-radius: 9px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    color: #365766;
+
+    background: #f8fcfd;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+input::placeholder {
+    color: #9aafb9;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   EFECTO HOVER DE LOS CAMPOS
+   ========================================================= */
+
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="tel"]:hover,
+select:hover {
+    border-color: #8db8ca;
+
+    background: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EFECTO FOCUS
+   ========================================================= */
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #5f99b5;
+
+    background: #ffffff;
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(127, 184, 212, 0.18),
+        0 5px 12px rgba(65, 113, 135, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+input[type="checkbox"] {
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #8bb4c6;
+
+    border-radius: 5px;
+
+    background: #f8fcfd;
+
+    cursor: pointer;
+
+    vertical-align: middle;
+
+    margin-right: 8px;
+
+    position: relative;
+
+    transition: 0.25s;
+}
+
+
+input[type="checkbox"]:hover {
+    border-color: #568ba5;
+
+    transform: scale(1.08);
+}
+
+
+input[type="checkbox"]:checked {
+    background: #6d9fb6;
+
+    border-color: #527f95;
+}
+
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    left: 2px;
+
+    top: -1px;
+}
+
+
+/* =========================================================
+   TEXTO DEL CHECKBOX
+   ========================================================= */
+
+input[type="checkbox"] + label {
+    display: inline-block;
+
+    font-weight: normal;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #55717e;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BOTÓN
+   ========================================================= */
+
+input[type="submit"] {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #82b4c9,
+            #5d93ad
+        );
+
+    color: white;
+
+    border: 2px solid #527f95;
+
+    border-radius: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 8px rgba(50, 91, 109, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =========================================================
+   HOVER BOTÓN
+   ========================================================= */
+
+input[type="submit"]:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #6da5bd,
+            #477e99
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 15px rgba(50, 91, 109, 0.30);
+}
+
+
+/* =========================================================
+   CLICK BOTÓN
+   ========================================================= */
+
+input[type="submit"]:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 2px 5px rgba(50, 91, 109, 0.25);
+}
+
+
+/* =========================================================
+   ELIMINAR <BR>
+   ========================================================= */
+
+br {
+    display: none;
+}
+
+
+/* =========================================================
+   ESPACIADO
+   ========================================================= */
+
+label,
+input,
+select {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   RECUADRO DEL POKÉMON
+   ========================================================= */
+
+.pokemon {
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.97),
+            rgba(245, 251, 253, 0.97)
+        );
+
+    width: 430px;
+
+    padding: 22px;
+
+    margin-top: 22px;
+
+    border-radius: 18px;
+
+    border: 1px solid #a8c7d5;
+
+    box-shadow:
+        0 10px 25px rgba(42, 83, 101, 0.18),
+        inset 0 0 0 4px rgba(217, 239, 248, 0.45);
+
+    animation: aparecerPokemon 1s ease;
+
+    transition: 0.35s ease;
+}
+
+
+/* =========================================================
+   DECORACIÓN POKÉDEX
+   ========================================================= */
+
+.pokemon::before {
+    content: "POKÉDEX";
+
+    display: block;
+
+    text-align: center;
+
+    color: #638da1;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 16px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px dashed #9bbdcc;
+}
+
+
+/* =========================================================
+   EFECTO DEL RECUADRO POKÉMON
+   ========================================================= */
+
+.pokemon:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 30px rgba(42, 83, 101, 0.23),
+        inset 0 0 0 4px rgba(217, 239, 248, 0.55);
+}
+
+
+/* =========================================================
+   LABEL DEL POKÉMON
+   ========================================================= */
+
+.pokemon label {
+    display: block;
+
+    font-weight: bold;
+
+    color: #34586b;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   INPUT DEL POKÉMON
+   ========================================================= */
+
+.pokemon input[type="text"] {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 2px solid #c2dbe6;
+
+    border-radius: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    color: #365766;
+
+    background: #f8fcfd;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================================
+   HOVER INPUT POKÉMON
+   ========================================================= */
+
+.pokemon input[type="text"]:hover {
+    border-color: #8db8ca;
+
+    background: white;
+}
+
+
+/* =========================================================
+   FOCUS INPUT POKÉMON
+   ========================================================= */
+
+.pokemon input[type="text"]:focus {
+    border-color: #5f99b5;
+
+    background: white;
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(127, 184, 212, 0.18),
+        0 5px 12px rgba(65, 113, 135, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ANIMACIÓN DEL TÍTULO
+   ========================================================= */
+
+@keyframes aparecerTitulo {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ANIMACIÓN DEL FORMULARIO
+   ========================================================= */
+
+@keyframes aparecerFormulario {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   ANIMACIÓN DEL POKÉMON
+   ========================================================= */
+
+@keyframes aparecerPokemon {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    form,
+    .pokemon {
+        width: 100%;
+
+        max-width: 430px;
+
+        padding: 24px;
+    }
+
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+        font-size: 14px;
+    }
+}
