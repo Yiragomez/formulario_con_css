@@ -1,118 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Formulario de Contacto</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro y Pokédex</title>
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <h1>Formulario de Contacto</h1>
 
-  <form id='FormularioRegistro' action="#">
-    <div class="form-row">
-      <div class="form-group">
-        <label>Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Carlos" required>
-      </div>
-    </div>
+    <h1>Formulario de Contacto</h1>
 
-    <div class="form-group">
-      <label for="Apellido">Apellido:</label><br>
-      <input type="text" id="apellido" name="apellido" placeholder="Perez" required>
-    </div>
+    <form id="FormularioRegistro">
 
-    <div>
-      <label for="pais">Pais:</label><br>
-      <select id="pais" name="pais" required>
-        <option value="" disabled selected>Selelccionar</option>
-        <option value="169 - Colombia"selected>Colombia</option>
-        <option value="149 - Canada">Canada</option>
-        <option value="850 - Venezuela">Venezuela</option>
-      </select>
-    </div>
-    <br>
+        <!-- Nombre -->
+        <div class="form-group">
 
-    <div>
-     <label for="ciudad">Ciudad:</label><br>
-      <select id="ciudad" name="ciudad" required>
-        <option value="" disabled selected>Seleccione una opción</option>
-        <optgroup label="Colombia">
-          <option value="11001 - Bogotá D.C.,"></option>
-          <option value="05001 - Medellin">Medellín</option>
-          <option value="76001 - Cali">Cali</option>
-          <option value="08001 - Barranquilla">Barranquilla</option>
-          <option value="13001 - Cartagena">Cartagena</option>
-        <optgroup>
-        <optgroup label="Canada">
-          <option value="3520005 - Toronto">Toronto</option>
-          <option value="2466023 - Montrèal">Montrèal</option>
-          <option value="5915022 - Vancouver">Vancouver</option>
-          <option value="4806016 - Calgary">Calgary</option>
-          <option value="4811061 - Edmonton">Edmonton</option>
-        <optgroup>
-        <optgroup label="Venezuela">
-          <option value="01001 - Caracas">Caracas</option>
-          <option value="24001 - Maracaibo">Maracaibo</option>
-          <option value="08001 - Valencia">Valencia</option>
-          <option value="11001 - Barquisimeto">Barquisimeto</option>
-          <option value="02001 - Barcelona">Barcelona</option>
-        <optgroup>
-      </select>
-    </div>
+            <label for="nombre">
+                Nombre:
+            </label>
 
-    <div>
-    <label>Tipo de documento</label><br>
-    <select id="tipo_documento" name="tipo_documento" placeholder="000 000 000" pattern="[0-9]{6,12}" title="Ingrese solo números" required>
-      <option value="" disabled>Seleccione...</option>
-      <option value="CC" selected>Cédula de Ciudadanía</option>
-      <option value="TI">Tarjeta de Identidad</option>
-      <option value="CE">Cedula de Extranjeria</option>
-    </select>
-    </div>
+            <input type="text"id="nombre" name="nombre" placeholder="Carlos" required>
 
-    <div>
-      <label>Número de Identificación:</label><br>
-      <input type="text" id="numero_identificacion" name="numero_identificacion" placeholder="1233489498" required>
-    </div>
-    <div>
-      <label>Fecha de Nacimiento:</label><br>
-      <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="dd/mm/aaaa" required>
-    </div>
-    <div>
-      <label>Número de Celular:</label><br>
-      <input type="tel" id="celular" name="celular" placeholder="000 000 00 00" required>
-    </div>
+        </div>
 
-    <div>
-      <input type="checkbox" id="politica_datos" name="politica_datos"required > 
-      <label for="`politica_datos">
-        Acepto la política de tratamiento de datos personales.<br>
-    </label>
-  </div>
- 
-    <button type="submit" class="btn-submit">Enviar Registro</button>
 
-  </form>
-  </div>
-  <div>
-  <div>
-    <form id="formPokedex">
-      <div>
-        <label>Inserte el nombre del Pokemon</label>
-        <input type="text" id="pokemonInput" placeholder="Ej. Pikachu, Charmander...">
-      </div>
-          <button type="submit">Buscar</button>
+  
+        <div class="form-group">
+
+            <label for="apellido"> Apellido: </label>
+            <input type="text"id="apellido"name="apellido"placeholder="Pérez"required>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="pais">
+                País:
+            </label>
+
+            <select id="pais" name="pais"required>
+
+                <option value="">
+                    Seleccionar
+                </option>
+
+                <option value="169 - Colombia">
+                    Colombia
+                </option>
+
+                <option value="149 - Canada">
+                    Canadá
+                </option>
+
+                <option value="850 - Venezuela">
+                    Venezuela
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad"name="ciudad"required >
+
+                <option value="">Seleccione una opción </option>
+
+                <optgroup label="Colombia">
+
+                    <option value="11001 - Bogotá D.C.">Bogotá D.C.</option>
+                    <option value="05001 - Medellín">Medellín</option>
+                    <option value="76001 - Cali">Cali</option>
+                    <option value="08001 - Barranquilla">Barranquilla</option>
+                    <option value="13001 - Cartagena">Cartagena</option>
+
+                </optgroup>
+
+
+                <optgroup label="Canadá">
+
+                    <option value="3520005 - Toronto">Toronto</option>
+                    <option value="2466023 - Montréal">Montréal</option>
+                    <option value="5915022 - Vancouver">Vancouver</option>
+                    <option value="4806016 - Calgary">Calgary</option>
+                    <option value="4811061 - Edmonton">Edmonton</option>
+
+                </optgroup>
+
+
+                <optgroup label="Venezuela">
+
+                    <option value="01001 - Caracas">Caracas </option>
+                    <option value="24001 - Maracaibo">Maracaibo</option>
+                    <option value="08001 - Valencia">Valencia</option>
+                    <option value="11001 - Barquisimeto">Barquisimeto</option>
+                    <option value="02001 - Barcelona">Barcelona</option>
+                
+                  </optgroup>
+
+            </select>
+
+        </div>
+
+
+    
+        <div class="form-group">
+
+            <label for="tipo_documento">Tipo de Documento:</label>
+            <select id="tipo_documento"name="tipo_documento"required >
+
+                <option value="">Seleccionar</option>
+                <option value="CC">CC</option>
+                <option value="TI">TI</option>
+                <option value="CE">CE</option>
+                <option value="PAS">PAS</option>
+
+            </select>
+
+        </div>
+
+
+      
+        <div class="form-group">
+
+            <label for="numero_identificacion">Número de Identificación:</label>
+            <input type="text" id="numero_identificacion" name="numero_identificacion"placeholder="1233489498"required>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="celular">Número de Celular:</label>
+            <input type="tel" id="celular" name="celular" placeholder="300 000 00 00" required>
+
+        </div>
+
+
+        <div class="politica">
+
+            <input type="checkbox" id="datos_personales" name="datos_personales" required>
+            <label for="datos_personales">
+                Acepto la política de tratamiento de datos personales.
+            </label>
+
+        </div>
+
+
+        <button type="submit" class="btn-submit">
+            Enviar Registro
+        </button>
+
     </form>
-  </div>
-  <div>
-      <div id="resultadoPokemon">
-        <img src="">
-        <p>lero lero candelero </p>
-      </div>
-  </div>
-</div>
 
-</main>
-<script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
